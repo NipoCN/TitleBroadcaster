@@ -29,7 +29,7 @@ public class TitleBroadcaster {
 		CommandSpec mainCommand = CommandSpec.builder()
 				.description(Text.of("TitleBroadcaster Main Command"))
 				.arguments(
-						GenericArguments.onlyOne(GenericArguments.string(Text.of("message")))
+						GenericArguments.remainingJoinedStrings(Text.of("message"))
 				)
 				.executor(new CommandMain())
 				.build();
